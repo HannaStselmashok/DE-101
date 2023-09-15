@@ -12,14 +12,44 @@ I've [created tables](MODULE02/creating_tables.sql) based on the Data Model and 
 
 **Overview: Sales and profit per quarter**
 
-![image](https://github.com/HannaStselmashok/DE-101/assets/99286647/75f29388-bcea-4199-993a-fc2124c11cf0)
+![image](https://github.com/HannaStselmashok/DE-101/assets/99286647/a14cd3b1-f104-45d6-9989-4a4c2a49407f)
 
-![image](https://github.com/HannaStselmashok/DE-101/assets/99286647/417ad4c6-cc20-4a5c-9dc9-7e155f11e670)
+![image](https://github.com/HannaStselmashok/DE-101/assets/99286647/4d3e74ed-0414-4d79-b1a2-46b2fd03919e)
 
 **Sales per month compared to the same month of the previous year**
 
-![image](https://github.com/HannaStselmashok/DE-101/assets/99286647/8d378006-d866-44a9-8e28-fd6e788a7fa8)
+![image](https://github.com/HannaStselmashok/DE-101/assets/99286647/69500ac4-88f0-4789-8b97-733eaf166e25)
 
-![image](https://github.com/HannaStselmashok/DE-101/assets/99286647/cadc0995-b849-4910-b83a-36b9edeba16c)
+![image](https://github.com/HannaStselmashok/DE-101/assets/99286647/59c050b7-04f8-4360-85fb-8e183702b99d)
 
-****
+**Sales and profit per manager**
+
+![image](https://github.com/HannaStselmashok/DE-101/assets/99286647/47674ce3-6d13-40f4-905c-49fafa9c43ed)
+
+![image](https://github.com/HannaStselmashok/DE-101/assets/99286647/c12eb5ce-f893-46f6-8145-eb7504b8b336)
+
+**Sales and profit per category**
+
+![image](https://github.com/HannaStselmashok/DE-101/assets/99286647/cab64f1a-6e14-43e7-a355-b8303b4dd460)
+
+![image](https://github.com/HannaStselmashok/DE-101/assets/99286647/d4ed3b59-1fcb-46e2-9b64-22d547f23497)
+
+**Sales ratio per category**
+
+![image](https://github.com/HannaStselmashok/DE-101/assets/99286647/c4a017a0-966b-46d8-a614-d98336efc40e)
+
+![image](https://github.com/HannaStselmashok/DE-101/assets/99286647/5fc9d259-c5b2-49bf-aa0e-7f56853ef944)
+
+**TOP 10 products by profit**
+
+![image](https://github.com/HannaStselmashok/DE-101/assets/99286647/48016124-8bee-4299-91c5-0594f97d4f04)
+
+![image](https://github.com/HannaStselmashok/DE-101/assets/99286647/83e509e9-9c72-4c64-a062-699decb68d7d)
+
+**Lost profit by state**
+
+![image](https://github.com/HannaStselmashok/DE-101/assets/99286647/c91b9c28-479e-46ca-a4be-d4b14236ac76)
+
+![image](https://github.com/HannaStselmashok/DE-101/assets/99286647/f2b1cb07-5f29-4c80-bbbd-796f7dbbbc24)
+
+[SQL queries](MODULE02/sql_queries.sql)
