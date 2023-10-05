@@ -9,3 +9,11 @@
 
 
 [Download Excel](https://github.com/HannaStselmashok/DE-101/blob/f98cf2b02ab7cb9303afbbea6b6483edee6873c3/MODULE01/Superstore_project.xlsx)
+
+# Tableau Dashboard
+
+![t1](https://github.com/HannaStselmashok/DE-101/assets/99286647/ad292a9b-7b99-4e24-bc7a-771e952328fc)
+![t2](https://github.com/HannaStselmashok/DE-101/assets/99286647/49e71c79-0dca-423c-8dc9-5ede8c56a27d)
+![t3](https://github.com/HannaStselmashok/DE-101/assets/99286647/d01c3211-77fa-49db-a0b3-3ecd9a7775a3)
+
+[View the dashboard]([https://github.com/HannaStselmashok/DE-101/blob/f98cf2b02ab7cb9303afbbea6b6483edee6873c3/MODULE01/Superstore_project.xlsx](https://public.tableau.com/views/SuperStore_16965383552090/SuperStoreProject-MainKPI?:language=en-US&:display_count=n&:origin=viz_share_link)https://public.tableau.com/views/SuperStore_16965383552090/SuperStoreProject-MainKPI?:language=en-US&:display_count=n&:origin=viz_share_link)
