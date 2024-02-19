@@ -52,26 +52,90 @@ inner join
 group by
     1, 2
 order by
-  1, 2
+    1, 2
 ```
 
 ![image](https://github.com/HannaStselmashok/DE-101/assets/99286647/59c050b7-04f8-4360-85fb-8e183702b99d)
 
 **Sales and profit per manager**
 
-![image](https://github.com/HannaStselmashok/DE-101/assets/99286647/47674ce3-6d13-40f4-905c-49fafa9c43ed)
+```sql
+select
+    year,
+    person,
+    round(sum(sales), 1) as sales,
+    round(sum(profit), 1) as profit
+from
+    calendar
+inner join
+    geography
+    using(geo_id)
+inner join
+    people
+    using(region)
+group by
+    1, 2
+order by
+    1, 2
+```
 
 ![image](https://github.com/HannaStselmashok/DE-101/assets/99286647/c12eb5ce-f893-46f6-8145-eb7504b8b336)
 
 **Sales and profit per category**
 
-![image](https://github.com/HannaStselmashok/DE-101/assets/99286647/cab64f1a-6e14-43e7-a355-b8303b4dd460)
+```sql
+select
+    category,
+    subcategory,
+    round(sum(sales), 1) as sales,
+    round(sum(profit), 1) as profit
+from
+    product
+inner join
+    sales
+    using(product_id)
+group by
+    1, 2
+order by
+    1, 2, 3 desc
+```
 
 ![image](https://github.com/HannaStselmashok/DE-101/assets/99286647/d4ed3b59-1fcb-46e2-9b64-22d547f23497)
 
 **Sales ratio per category**
 
-![image](https://github.com/HannaStselmashok/DE-101/assets/99286647/c4a017a0-966b-46d8-a614-d98336efc40e)
+```sql
+with category_sales as (
+    select
+        category,
+        round(sum(sales), 1) as cat_sales
+    from
+        product
+    inner join
+        sales
+        using(product_id)
+    group by 1
+)
+
+select
+    category,
+    subcategory,
+    round(sum(sales), 1) as sales,
+    round(sum(sales)/cat_sales * 100, 1) as ratio_cat,
+    cat_sales
+from
+    product
+inner join
+    sales
+    using(product_id)
+inner join
+    category_sales
+    using(category)
+group by
+    1, 2, 5
+order by
+    1, 3 desc
+```
 
 ![image](https://github.com/HannaStselmashok/DE-101/assets/99286647/5fc9d259-c5b2-49bf-aa0e-7f56853ef944)
 
