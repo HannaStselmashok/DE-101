@@ -12,13 +12,48 @@ I've [created tables](MODULE02/creating_tables.sql) based on the Data Model and 
 
 **Overview: Sales and profit per quarter**
 
-![image](https://github.com/HannaStselmashok/DE-101/assets/99286647/a14cd3b1-f104-45d6-9989-4a4c2a49407f)
+```sql
+select
+    year,
+    quarter,
+    round(sum(sales), 1) as sales,
+    round(sum(profit), 1) as profit
+from
+    calendar
+inner join
+    sales
+    using(order_date)
+group by
+    year, quarter
+order by
+    year, quarter;
+```
 
 ![image](https://github.com/HannaStselmashok/DE-101/assets/99286647/4d3e74ed-0414-4d79-b1a2-46b2fd03919e)
 
 **Sales per month compared to the same month of the previous year**
 
-![image](https://github.com/HannaStselmashok/DE-101/assets/99286647/69500ac4-88f0-4789-8b97-733eaf166e25)
+```sql
+select
+    year,
+    month,
+    round(sum(sales), 1) as sales_per_month,
+    round(lag(sum(sales), 12)
+    over(
+        order by year, month), 1) as sales_prev_year,
+    round((sum(sales)/lag(sum(sales), 12)
+    over(
+        order by year, month)) * 100 - 100, 1) as percent_difference
+from
+    calendar
+inner join
+    sales
+    using(order_date)
+group by
+    1, 2
+order by
+  1, 2
+```
 
 ![image](https://github.com/HannaStselmashok/DE-101/assets/99286647/59c050b7-04f8-4360-85fb-8e183702b99d)
 
