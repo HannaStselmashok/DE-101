@@ -141,14 +141,47 @@ order by
 
 **TOP 10 products by profit**
 
-![image](https://github.com/HannaStselmashok/DE-101/assets/99286647/48016124-8bee-4299-91c5-0594f97d4f04)
+```sql
+select
+    product_name,
+    round(sum(profit), 1) as profit
+from
+    product
+inner join
+    sales
+    using(product_id)
+group by
+    1
+order by
+    2 desc
+limit 10
+```
 
 ![image](https://github.com/HannaStselmashok/DE-101/assets/99286647/83e509e9-9c72-4c64-a062-699decb68d7d)
 
 **Lost profit by state**
 
-![image](https://github.com/HannaStselmashok/DE-101/assets/99286647/c91b9c28-479e-46ca-a4be-d4b14236ac76)
+```sql
+select
+    state,
+    round(sum(sales), 1) as refunds,
+    count(returned) as amount_returned
+from
+    geography
+inner join
+    sales
+    using(geo_id)
+inner join
+    (select
+        distinct order_id,
+        returned
+    from
+        returns) r
+    using(order_id)
+group by
+    1
+order by
+    2 desc
+```
 
 ![image](https://github.com/HannaStselmashok/DE-101/assets/99286647/f2b1cb07-5f29-4c80-bbbd-796f7dbbbc24)
-
-[SQL queries](MODULE02/sql_queries.sql)
